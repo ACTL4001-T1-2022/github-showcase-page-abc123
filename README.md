@@ -22,7 +22,6 @@ R was used to clean/standardise the raw datasets initially.
 > League defending, passing, shooting, salary, and goalkeeping statistics imported from Excel.
 
 ```
-
 install.packages("tidyverse")
 library(tidyverse)
 
@@ -36,13 +35,11 @@ sal21 <- read.csv("sal21.csv",header=T,stringsAsFactors = T)
 
 sal21 <- sal21[!duplicated(sal21),]
 sal20 <- sal20[!duplicated(sal20),]
-
 ```
 
 > Data separated based on year (2020 and 2021).
 
 ```
-
 ld21 <- ld %>% filter(Year==2021)
 lg21 <- lg %>% filter(Year==2021)
 lp21 <- lp %>% filter(Year==2021)
@@ -52,13 +49,11 @@ ld20 <- ld %>% filter(Year==2020)
 lg20 <- lg %>% filter(Year==2020)
 lp20 <- lp %>% filter(Year==2020)
 ls20 <- ls %>% filter(Year==2020)
-
 ```
 
 > Defending, shooting, passing, and salary data were then joined onto one dataset. Goalkeeping data separated due to different stats tracked for goalkeepers.
 
 ```
-
 ldp21 <- left_join(ld21,lp21,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldps21 <- left_join(ldp21,ls21,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldpss21 <- left_join(ldps21,sal21,by=c("Player"))
@@ -68,17 +63,14 @@ ldp20 <- left_join(ld20,lp20,by=c("Player","Nation","Pos","Squad","League","Year
 ldps20 <- left_join(ldp20,ls20,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldpss20 <- left_join(ldps20,sal20,by=c("Player"))
 lgs20 <- left_join(lg20,sal20,by=c("Player"))
-
 ```
 
 > N/A and negative data were assumed to be 0, to avoid data issues in modelling steps.
 
 ```
-
 ldpss <- union_all(ldpss20, ldpss21)
 ldpss[is.na(ldpss)] <- 0
 ldpss[is.negative(ldpss)] <- 0
-
 ```
 
 ## Assumptions
@@ -112,17 +104,14 @@ ldpss[is.negative(ldpss)] <- 0
 A random forest model was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
 ```
-
 library(gbm)
 library(randomForest)
 
 ball <- read.csv('ldpssmerged.csv', header = TRUE)
-
 ```
 > Age and league treated as factors in model.
 
 ```
-
 ball$Player <- NULL
 ball$Age <- as.factor(ball$Age)
 ball$League <- as.factor(ball$League)
@@ -130,23 +119,19 @@ ball$League <- as.factor(ball$League)
 ball[is.na(ball)] <- 0
 
 ball_gk <- ball %>% filter(str_detect(ball$Pos, "GK"))
-
 ```
 > Dataset portioned to training and test set with an 80:20 split.
 
 ```
-
 set.seed(1)
 training_set <- sample(length(ball$Salary), 0.8*length(ball$Salary))
 train <- ball[training_set, ]
 test <- ball[-training_set, ]
-
 ```
 
 > Random Forest using training and testing sets from logistic regression
 
 ```
-
 p <- length(ball) - 1 #Number of predictors in the data set
 m <- round(sqrt(p))
 rf_fit <- randomForest(as.numeric(Salary) ~ ., data = ball, mtry = m, importance = TRUE)
@@ -157,14 +142,12 @@ m <- round(sqrt(p))
 rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = train, mtry = m, importance = TRUE)
 
 varImpPlot(rf_fit)
-
 ```
 
 > A separate model was fit for goalkeepers due to different stats available for them.
 
 
 ```
-
 p_gk <- length(ball_gk) - 1 #Number of predictors in the data set
 m_gk <- round(sqrt(p_gk))
 rf_fit_gk <- randomForest(as.numeric(Salary) ~ ., data = ball_gk, mtry = m_gk, importance = TRUE, na.action = na.roughfix)
@@ -174,17 +157,14 @@ varImpPlot(rf_fit_gk)
 lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
 lm_pred <- predict(lm_fit, test)
 lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
-
 ```
 > GBM also fit, with results compared to Random Forest
 
 
 ```
-
 b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
 b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
-
 ```
 
 > RF performed similarly to the GBM's, and because GBM's have the potential to overfit, the random forest models were chosen for our feature selection.
