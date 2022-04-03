@@ -95,6 +95,61 @@ ldpss[is.negative(ldpss)] <- 0
 ### Feature Selection
 A random forest model was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
+```
+library(gbm)
+library(randomForest)
+
+ball <- read.csv('ldpssmerged.csv', header = TRUE)
+```
+> Age and league treated as factors in model.
+```
+ball$Player <- NULL
+ball$Age <- as.factor(ball$Age)
+ball$League <- as.factor(ball$League)
+
+ball[is.na(ball)] <- 0
+
+ball_gk <- ball %>% filter(str_detect(ball$Pos, "GK"))
+```
+> Dataset portioned to training and test set.
+```
+set.seed(1)
+training_set <- sample(length(ball$Salary), 0.8*length(ball$Salary))
+train <- ball[training_set, ]
+test <- ball[-training_set, ]
+```
+
+> Random Forest using training and testing sets from logistic regression
+```
+p <- length(ball) - 1 #Number of predictors in the data set
+m <- round(sqrt(p))
+rf_fit <- randomForest(as.numeric(Salary) ~ ., data = ball, mtry = m, importance = TRUE)
+rf_fit1 <- randomForest(as.numeric(Salary) ~ League + Expected.xG + xA + Tkl.Int, data = ball, mtry = 2, importance = TRUE)
+
+p <- length(train) - 1 #Number of predictors in the data set
+m <- round(sqrt(p))
+rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = train, mtry = m, importance = TRUE)
+
+varImpPlot(rf_fit)
+
+p_df <- length(ball_df) - 1 #Number of predictors in the data set
+m_df <- round(sqrt(p_df))
+rf_fit_df <- randomForest(as.numeric(Salary) ~ ., data = ball_df, mtry = m_df, importance = TRUE, na.action = na.roughfix)
+
+#varImpPlot(rf_fit_gk)
+
+lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
+lm_pred <- predict(lm_fit, test)
+lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
+```
+> GBM also fit, with results compared to Random Forest
+```
+b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
+#Best n.tree = 3703 from cv.fold = 10
+b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
+b_comparison <- abs(b_prob - as.numeric(test$Salary))
+```
+
 ### Player Metric
 
 ### Comparison Against Competitors
