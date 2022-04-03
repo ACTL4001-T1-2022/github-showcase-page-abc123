@@ -68,7 +68,6 @@ ldpss[is.na(ldpss)] <- 0
 ldpss[is.negative(ldpss)] <- 0
 ```
 
-
 ## Assumptions
 ### Team Selection
 | Factor  | Assumption |
@@ -79,10 +78,10 @@ ldpss[is.negative(ldpss)] <- 0
 | Tournament Performance  | Tournament performance is positively correlated with economic impact. |
 | Loan Provisions  | The loan fee is charged recurringly on an annual basis.  |
 
-
 ## Team Selection Methodology
 
 ### Feature Selection
+A random forest model (Appendix 2-7) was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
 ### Player Metric
 
