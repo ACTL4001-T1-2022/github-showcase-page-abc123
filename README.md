@@ -18,7 +18,7 @@ before concluding with a discussion of limitations_
 # Project Objectives 
 
 The objectives of this project include: 
-> blah
+* blah
 
 ---
 
