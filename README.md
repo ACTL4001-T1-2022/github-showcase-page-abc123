@@ -68,6 +68,9 @@ forwards <- ldpss %>% filter(position=="F")
 defenders <- ldpss %>% filter(position=="D")
 midfields <- ldpss %>% filter(position=="M")
 goalkeep <- ldpss %>% filter(position=="G")
+
+ldpss[is.na(ldpss)] <- 0
+ldpss[is.negative(ldpss)] <- 0
 ```
 ---
 
