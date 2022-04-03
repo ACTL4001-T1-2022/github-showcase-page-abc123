@@ -19,8 +19,6 @@ for the country over the next 10 years such as GDP growth.
 
 R was used to clean/standardise the raw datasets initially. 
 
-R was used to clean/standardise the raw datasets initially. 
-
 > League defending, passing, shooting, salary, and goalkeeping statistics imported from Excel.
 
 ```
@@ -68,7 +66,6 @@ lgs20 <- left_join(lg20,sal20,by=c("Player"))
 ldpss <- union_all(ldpss20, ldpss21)
 ldpss[is.na(ldpss)] <- 0
 ldpss[is.negative(ldpss)] <- 0
-
 ```
 
 
