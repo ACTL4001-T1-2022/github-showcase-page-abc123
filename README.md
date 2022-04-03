@@ -17,7 +17,9 @@ for the country over the next 10 years such as GDP growth.
 
 ## Data Cleaning
 
-R was used to clean/standardise the raw datasets initially. Defending, passing, and shooting data were joined on players and year from the raw data to create a dataset with all statistics for each player as well as their salary data.
+R was used to clean/standardise the raw datasets initially. 
+
+> League defending, passing, shooting, salary, and goalkeeping statistics imported from Excel.
 
 ```
 install.packages("tidyverse")
@@ -33,6 +35,9 @@ sal21 <- read.csv("sal21.csv",header=T,stringsAsFactors = T)
 
 sal21 <- sal21[!duplicated(sal21),]
 sal20 <- sal20[!duplicated(sal20),]
+```
+> Data separated based on year (2020 and 2021).
+```
 
 ld21 <- ld %>% filter(Year==2021)
 lg21 <- lg %>% filter(Year==2021)
@@ -72,6 +77,7 @@ goalkeep <- ldpss %>% filter(position=="G")
 
 ldpss[is.na(ldpss)] <- 0
 ldpss[is.negative(ldpss)] <- 0
+
 ```
 
 
