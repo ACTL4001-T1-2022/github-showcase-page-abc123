@@ -107,6 +107,20 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Feature Selection
 
+## Methodology
+
+### Feature Selection
+
+
+### Player Metric
+
+
+### Comparison Against Competitors
+
+### Economic Impacts
+
+
+## Risks and Limitations
 
 ## Player Metric
 
