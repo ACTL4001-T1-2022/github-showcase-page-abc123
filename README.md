@@ -1,6 +1,4 @@
-# Actuarial Theory and Practice A
-
-### Building a Competitive National Football Team and an Analysis of its Economic Impacts on Rarita
+# Building a Competitive National Football Team
 
 ![](soccer.gif)
 
