@@ -80,7 +80,14 @@ ldpss[is.negative(ldpss)] <- 0
 | Loan Provisions  | The loan fee is charged recurringly on an annual basis.  |
 
 
-## Methodology
+## Team Selection Methodology
+
+### Feature Selection
+
+### Player Metric
+
+### Comparison Against Competitors
+
 ### National Football Team Selected
 | Player | Nation |
 | --- | --- |
@@ -105,32 +112,10 @@ ldpss[is.negative(ldpss)] <- 0
 | Z. Nyamahunge | Rarita |
 | F. Ithungu | Rarita |
 
-## Feature Selection
-
-## Methodology
-
-### Feature Selection
-
-
-### Player Metric
-
-
-### Comparison Against Competitors
-
-### Economic Impacts
-
 
 ## Risks and Limitations
-
-## Player Metric
-
-
-## Comparison Against Competitors
 
 ## Economic Impacts
-
-
-## Risks and Limitations
 
 
 ![](200w.gif)
