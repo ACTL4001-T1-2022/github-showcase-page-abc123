@@ -24,6 +24,7 @@ The objectives of this project include:
 
 > R was used to clean/standardise the raw datasets initially. 
 > Defending, passing, and shooting data were joined on players and year from the raw data to create a dataset with all statistics for each player as well as their salary data.
+> 
 ```
 install.packages("tidyverse")
 library(tidyverse)
@@ -72,7 +73,7 @@ forwards <- ldpss %>% filter(position=="F")
 defenders <- ldpss %>% filter(position=="D")
 midfields <- ldpss %>% filter(position=="M")
 goalkeep <- ldpss %>% filter(position=="G")
-
+---
 
 ## Assumptions
 
@@ -85,8 +86,6 @@ goalkeep <- ldpss %>% filter(position=="G")
 
 ## Risks and Limitations
 
-
----
 
 >Now it's time to build your own website to showcase your work.  
 >To create a website on GitHub Pages to showcase your work is very easy.
