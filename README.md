@@ -1,6 +1,6 @@
 # Actuarial Theory and Practice A
 
-_"Tell me and I forget. Teach me and I remember. Involve me and I learn" - Benjamin Franklin_
+_"Tell me and I forget. Teach me and I remember. Involve me and I learn" - Benjamin Bob
 
 ---
 
