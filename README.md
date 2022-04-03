@@ -111,7 +111,7 @@ ball[is.na(ball)] <- 0
 
 ball_gk <- ball %>% filter(str_detect(ball$Pos, "GK"))
 ```
-> Dataset portioned to training and test set.
+> Dataset portioned to training and test set, with a 80:20 split.
 ```
 set.seed(1)
 training_set <- sample(length(ball$Salary), 0.8*length(ball$Salary))
