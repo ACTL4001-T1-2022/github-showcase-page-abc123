@@ -168,6 +168,7 @@ varImpPlot(rf_fit)
 p_gk <- length(ball_gk) - 1 #Number of predictors in the data set
 m_gk <- round(sqrt(p_gk))
 rf_fit_gk <- randomForest(as.numeric(Salary) ~ ., data = ball_gk, mtry = m_gk, importance = TRUE, na.action = na.roughfix)
+
 varImpPlot(rf_fit_gk)
 
 lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
