@@ -28,7 +28,6 @@ This is written in markdown language.
 >Be creative! Feel free to link to embed your [data](player_data_salaries_2020.csv), [code](sample-data-clean.ipynb), [image](ACC.png) here
 
 More information on GitHub Pages can be found [here](https://pages.github.com/)
-![](Actuarial.gif)
 
 ![](s02_19352233.jpg)
 
