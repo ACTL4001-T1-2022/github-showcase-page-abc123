@@ -92,7 +92,7 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Team Selection Methodology
 
-### Feature Selection
+## Feature Selection
 A random forest model was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
 ```
@@ -150,11 +150,11 @@ b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
 ```
 
-### Player Metric
+## Player Metric
 
-### Comparison Against Competitors
+## Comparison Against Competitors
 
-### National Football Team Selected
+## National Football Team Selected
 | Player | Nation |
 | :---:  | :---:  |
 | Y. Rabinovitch | Western Niasland |
