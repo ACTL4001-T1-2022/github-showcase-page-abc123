@@ -81,6 +81,29 @@ ldpss[is.negative(ldpss)] <- 0
 
 
 ## Methodology
+### National Football Team Selected
+| Player | Nation |
+| --- | --- |
+| Y. Rabinovitch | Western Niasland |
+| G. Katumba | Biarizea |
+| M. Nkhata | People's Land of Maneau |
+| M. Rashid | Sobianitedrucy |
+| C. Kakayi | Dosqaly |
+| S. Rizzo | Sobianitedrucy |
+| X. Takagi | Rarita |
+| V. It | Mico |
+| O. Nakisige | Reugha |
+| A. Fekete | Byasier Pujan |
+| M. Kabiru | Sobianitedrucy |
+| F. Among | Biarizea |
+| D. Makumbi | Rarita |
+| K. Mawanda | Varijitri Isles |
+| P. Anderson | Esia |
+| J. Yeo | Dosqaly |
+| I. Tabu | Rarita |
+| K. Kazlo | Rarita |
+| Z. Nyamahunge | Rarita |
+| F. Ithungu | Rarita |
 
 ## Feature Selection
 
