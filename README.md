@@ -188,7 +188,7 @@ a high-level view and would unnecessarily increase the complexity of the models.
 potential impacts will be briefly discussed here for completeness of our evaluation.
 
 | Limitation | Implication |
-| ------------- | ------------- |
+| :---: | :---: |
 | Generating revenue by loaning Raritan players not included in net revenue | Revenues are understated but best estimates show they are sufficient |
 | Only salaries of new players on national teams and inflation considered in expense projections | Currently no consideration for potential fixed costs (e.g. investment in infrastructure). These expenses must be included separately in the future if required | 
 | Team construction dependent on player data and metrics of competing teams, all of which only available for past periods | Opposing teams may improve significantly compared to previous years, which may our benchmarks for teambuilding irrelevant |
