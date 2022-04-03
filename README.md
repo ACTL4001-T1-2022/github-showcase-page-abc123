@@ -15,7 +15,7 @@ before concluding with a discussion of limitations
 
 ---
 
-##Data Cleaning
+## Data Cleaning
 >Now it's time to build your own website to showcase your work.  
 >To create a website on GitHub Pages to showcase your work is very easy.
 
