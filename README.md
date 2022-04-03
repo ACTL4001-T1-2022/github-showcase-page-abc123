@@ -71,12 +71,24 @@ ldpss[is.negative(ldpss)] <- 0
 ## Assumptions
 ### Team Selection
 | Factor  | Assumption |
-| ------------- | ------------- |
+| :---:  | :---:  |
 | Salary        | Player salaries were used as a proxy for their overall ability, with better players being paid higher salaries.  |
 | Salary Growth  | In line with Rarita's inflation rates. |
 | Inflation Rates  | Projected using a moving average of inflation rates from the preceding 5 years.  |
 | Tournament Performance  | Tournament performance is positively correlated with economic impact. |
 | Loan Provisions  | The loan fee is charged recurringly on an annual basis.  |
+
+### Economic Impact
+| Factor  | Assumption |
+| :---:  | :---:  |
+| Inflation        | Projected from 2021-31 using a 5-year moving average with projected rates of 2.5-3% over the period, which is in-line with Rarita's historical inflation trends. |
+| Discount Rate | Set as 1.9%, the 10-year treasury yield as of 2021 for Rarita. |
+| Commercial Revenue  | A mix of inflation and social media growth was used to project commercial revenue.|
+| Broadcast Revenue  | Average annual growth over 2016-19 was used to estimate long-term growth. |
+| Staff Expenses  | Estimated using existing per capital staff expenses and salary of constructed team. Projected under best-estimate of inflation for future periods.  |
+| Matchday Revenue and Other Expenses | Projected using estimated inflation.  |
+| Social Media Growth | Best estimate of 5% annual growth rate using baseline scenario of Rarita's tournament performance. |
+| GDP Growth | Baseline economic scenario projected using linear regression model on Healthcare Spending, Savings Rate and Population Density. |
 
 ## Team Selection Methodology
 
