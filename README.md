@@ -2,7 +2,7 @@
 
 ### Building a Competitive National Football Team and an Analysis of its Economic Impacts on Rarita
 
-![](messi.gif)
+![](soccer.gif)
 
 ## Overview
 
