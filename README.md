@@ -15,12 +15,10 @@ adapt to changing circumstances and subsequently re-select the team. Finally, du
 quantitative assumptions used, a sensitivity analysis was conducted to stress test economic feasibility of the team,
 before concluding with a discussion of limitations_
 
-# Project Objectives 
+## Project Objectives 
 
 The objectives of this project include: 
 * blah
-
----
 
 ## Data Cleaning
 
