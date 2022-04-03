@@ -75,7 +75,7 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Assumptions
 ### Team Selection
-| Factor  | Assumption |
+| Factor | Assumption |
 | :---:  | :---:  |
 | Salary        | Player salaries were used as a proxy for their overall ability, with better players being paid higher salaries.  |
 | Salary Growth  | In line with Rarita's inflation rates. |
