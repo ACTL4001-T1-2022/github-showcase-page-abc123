@@ -5,17 +5,40 @@
 ## Overview
 
 This landing page showcases the methodology behind our construction of Rarita’s national football team using statistical models and analyses the
-impact of a competitive team on the country’s economy. Data cleaning and standardisation was initially conducted
+impact of a competitive team on the country’s economy. Here, we outline several key considerations in our team selection including data cleaning, assumptions, methodology, economic impacts and risks and limitations. 
+
+_Data cleaning and standardisation was initially conducted
 to address data concerns. Several foundational assumptions were established before model fitting for team
 selection and projection of key economic indices. Due to the need to monitor the effectiveness of the proposed
 team in achieving the established objectives, a flexible implementation plan was established to enable Rarita to
 adapt to changing circumstances and subsequently re-select the team. Finally, due to the subjective nature of the
 quantitative assumptions used, a sensitivity analysis was conducted to stress test economic feasibility of the team,
-before concluding with a discussion of limitations
+before concluding with a discussion of limitations_
+
+# Project Objectives 
+
+The objectives of this project include: 
+> blah
 
 ---
 
 ## Data Cleaning
+
+
+## Assumptions
+
+
+## Methodology
+
+
+## Economic Impacts
+
+
+## Risks and Limitations
+
+
+---
+
 >Now it's time to build your own website to showcase your work.  
 >To create a website on GitHub Pages to showcase your work is very easy.
 
