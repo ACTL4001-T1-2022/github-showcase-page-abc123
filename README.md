@@ -140,7 +140,7 @@ p_df <- length(ball_df) - 1 #Number of predictors in the data set
 m_df <- round(sqrt(p_df))
 rf_fit_df <- randomForest(as.numeric(Salary) ~ ., data = ball_df, mtry = m_df, importance = TRUE, na.action = na.roughfix)
 
-#varImpPlot(rf_fit_gk)
+varImpPlot(rf_fit_gk)
 
 lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
 lm_pred <- predict(lm_fit, test)
@@ -149,7 +149,6 @@ lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
 > GBM also fit, with results compared to Random Forest
 ```
 b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
-#Best n.tree = 3703 from cv.fold = 10
 b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
 ```
