@@ -69,7 +69,6 @@ ldpss[is.negative(ldpss)] <- 0
 ```
 
 
-
 ## Assumptions
 ### Team Selection
 | Factor  | Assumption |
@@ -83,6 +82,13 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Methodology
 
+## Feature Selection
+
+
+## Player Metric
+
+
+## Comparison Against Competitors
 
 ## Economic Impacts
 
