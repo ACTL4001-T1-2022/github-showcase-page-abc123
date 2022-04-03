@@ -76,6 +76,9 @@ ldpss[is.negative(ldpss)] <- 0
 | ------------- | ------------- |
 | Salary  | Content Cell  |
 | Salary Growth  | Content Cell  |
+| Inflation Rates  | Content Cell  |
+| Tournament Performance  | Content Cell  |
+| Loan Provisions  | Content Cell  |
 
 
 ## Methodology
