@@ -1,5 +1,5 @@
 # Building a Competitive National Football Team
-##And an Analysis of its Economic Impacts on Rarita
+## And an Analysis of its Economic Impacts on Rarita
 
 ![](messi.gif)
 
