@@ -156,7 +156,7 @@ b_comparison <- abs(b_prob - as.numeric(test$Salary))
 
 ### National Football Team Selected
 | Player | Nation |
-| --- | --- |
+| :---:  | :---:  |
 | Y. Rabinovitch | Western Niasland |
 | G. Katumba | Biarizea |
 | M. Nkhata | People's Land of Maneau |
