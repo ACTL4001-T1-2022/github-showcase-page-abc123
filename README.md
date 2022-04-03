@@ -97,6 +97,7 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Team Selection Methodology
 
+
 ### Feature Selection
 A random forest model was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
@@ -116,13 +117,14 @@ ball[is.na(ball)] <- 0
 
 ball_gk <- ball %>% filter(str_detect(ball$Pos, "GK"))
 ```
-> Dataset portioned to training and test set, with a 80:20 split.
+> Dataset portioned to training and test set.
 ```
 set.seed(1)
 training_set <- sample(length(ball$Salary), 0.8*length(ball$Salary))
 train <- ball[training_set, ]
 test <- ball[-training_set, ]
 ```
+
 > Random Forest using training and testing sets from logistic regression
 ```
 p <- length(ball) - 1 #Number of predictors in the data set
@@ -135,11 +137,12 @@ m <- round(sqrt(p))
 rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = train, mtry = m, importance = TRUE)
 
 varImpPlot(rf_fit)
-
-p_df <- length(ball_df) - 1 #Number of predictors in the data set
-m_df <- round(sqrt(p_df))
-rf_fit_df <- randomForest(as.numeric(Salary) ~ ., data = ball_df, mtry = m_df, importance = TRUE, na.action = na.roughfix)
-
+```
+> A separate model was fit for goalkeepers due to different stats available for them.
+```
+p_gk <- length(ball_gk) - 1 #Number of predictors in the data set
+m_gk <- round(sqrt(p_gk))
+rf_fit_gk <- randomForest(as.numeric(Salary) ~ ., data = ball_gk, mtry = m_gk, importance = TRUE, na.action = na.roughfix)
 varImpPlot(rf_fit_gk)
 
 lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
@@ -149,9 +152,14 @@ lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
 > GBM also fit, with results compared to Random Forest
 ```
 b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
+#Best n.tree = 3703 from cv.fold = 10
 b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
 ```
+> RF performed similarly to the GBM's, and because GBM's have the potential to overfit, the random forest models were chosen for our feature selection.
+> This model fitting process was repeated by excluding the least important and unstandardised variables (such as aggregated statistics rather than per 90-minute statistics) to prevent overfitting and collinearity amongst predictors.
+
+This ultimately led us to an RF model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
 
 ### Player Metric
 
