@@ -74,7 +74,7 @@ ldpss[is.negative(ldpss)] <- 0
 ### Team Selection
 | Factor  | Assumption |
 | ------------- | ------------- |
-| Salary  | Content Cell  |
+| Salary        | Content Cell  |
 | Salary Growth  | Content Cell  |
 | Inflation Rates  | Content Cell  |
 | Tournament Performance  | Content Cell  |
