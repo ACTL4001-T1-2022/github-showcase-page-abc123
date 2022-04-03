@@ -82,7 +82,12 @@ ldpss[is.negative(ldpss)] <- 0
 
 
 ## Assumptions
-![Capture](https://user-images.githubusercontent.com/102905880/161430742-91f56771-e2f9-47ca-8cfd-afb49d669e09.PNG)
+# Team Selection
+| Factor  | Assumption |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 ## Methodology
 
