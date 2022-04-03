@@ -81,7 +81,7 @@ ldpss[is.negative(ldpss)] <- 0
 ## Team Selection Methodology
 
 ### Feature Selection
-A random forest model (Appendix 2-7) was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
+A random forest model was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
 ### Player Metric
 
