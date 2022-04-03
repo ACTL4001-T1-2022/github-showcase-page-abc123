@@ -18,7 +18,6 @@ for the country over the next 10 years such as GDP growth.
 ## Data Cleaning
 
 R was used to clean/standardise the raw datasets initially. Defending, passing, and shooting data were joined on players and year from the raw data to create a dataset with all statistics for each player as well as their salary data.
- 
 ```
 install.packages("tidyverse")
 library(tidyverse)
@@ -61,15 +60,14 @@ write.csv(ldpss21,"ldpss21.csv")
 write.csv(lgs20,"lgs20.csv")
 write.csv(lgs21,"lgs21.csv")
 
-ldpss <- ldpss %>% mutate(position=substr(Pos,1,1))
+ldpss <- union_all(ldpss20, ldpss21)
+ldpss[is.na(ldpss)] <- 0
+ldpss[is.negative(ldpss)] <- 0
 
 forwards <- ldpss %>% filter(position=="F")
 defenders <- ldpss %>% filter(position=="D")
 midfields <- ldpss %>% filter(position=="M")
 goalkeep <- ldpss %>% filter(position=="G")
-
-ldpss[is.na(ldpss)] <- 0
-ldpss[is.negative(ldpss)] <- 0
 ```
 ---
 
