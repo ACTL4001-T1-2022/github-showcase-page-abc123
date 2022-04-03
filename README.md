@@ -75,6 +75,7 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Assumptions
 ### Team Selection
+
 | Factor | Assumption |
 | :---:  | :---:  |
 | Salary        | Player salaries were used as a proxy for their overall ability, with better players being paid higher salaries.  |
@@ -84,6 +85,7 @@ ldpss[is.negative(ldpss)] <- 0
 | Loan Provisions  | The loan fee is charged recurringly on an annual basis.  |
 
 ### Economic Impact
+
 | Factor  | Assumption |
 | :---:  | :---:  |
 | Inflation        | Projected from 2021-31 using a 5-year moving average with projected rates of 2.5-3% over the period, which is in-line with Rarita's historical inflation trends. |
@@ -165,6 +167,7 @@ This ultimately led us to an RF model that only included the 10 most significant
 ### Comparison Against Competitors
 
 ### National Football Team Selected
+
 | Player | Nation |
 | :---:  | :---:  |
 | Y. Rabinovitch | Western Niasland |
@@ -201,7 +204,6 @@ potential impacts will be briefly discussed here for completeness of our evaluat
 | Only salaries of new players on national teams and inflation considered in expense projections | Currently no consideration for potential fixed costs (e.g. investment in infrastructure). These expenses must be included separately in the future if required | 
 | Team construction dependent on player data and metrics of competing teams, all of which only available for past periods | Opposing teams may improve significantly compared to previous years, which may our benchmarks for teambuilding irrelevant |
 | Players are selected based on league statistics, so only players present in league dataset are considered in team selection | Some teams had a large number of players not present in league data and their team is unable to be evaluated by our metric. We also did not allow selection of non-league players in our team construction | 
-
 
 ## Economic Impacts
 
