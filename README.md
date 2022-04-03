@@ -74,10 +74,10 @@ ldpss[is.negative(ldpss)] <- 0
 | Factor  | Assumption |
 | ------------- | ------------- |
 | Salary        | Player salaries were used as a proxy for their overall ability, with better players being paid higher salaries.  |
-| Salary Growth  | Content Cell  |
-| Inflation Rates  | Content Cell  |
-| Tournament Performance  | Content Cell  |
-| Loan Provisions  | Content Cell  |
+| Salary Growth  | In line with Rarita's inflation rates. |
+| Inflation Rates  | Projected using a moving average of inflation rates from the preceding 5 years.  |
+| Tournament Performance  | Tournament performance is positively correlated with economic impact. |
+| Loan Provisions  | The loan fee is charged recurringly on an annual basis.  |
 
 
 ## Methodology
