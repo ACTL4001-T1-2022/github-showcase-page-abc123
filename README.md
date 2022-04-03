@@ -72,7 +72,6 @@ goalkeep <- ldpss %>% filter(position=="G")
 
 ldpss[is.na(ldpss)] <- 0
 ldpss[is.negative(ldpss)] <- 0
-
 ```
 ---
 
