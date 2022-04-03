@@ -17,7 +17,8 @@ for the country over the next 10 years such as GDP growth.
 
 ## Data Cleaning
 
-R was used to clean/standardise the raw datasets initially. Defending, passing, and shooting data were joined on players and year from the raw data to create a dataset with all statistics for each player as well as their salary data.
+> R was used to clean/standardise the raw datasets initially. 
+> Defending, passing, and shooting data were joined on players and year from the raw data to create a dataset with all statistics for each player as well as their salary data.
 ```
 install.packages("tidyverse")
 library(tidyverse)
@@ -94,6 +95,7 @@ This is written in markdown language.
 * Click [4001 link](https://classroom.github.com/a/ggiq0YzO) to accept your group assignment.
 * Click [5100 link](https://classroom.github.com/a/uVytCqDv) to accept your group assignment 
 
+![](200w.gif)
 
 #### Follow the [guide doc](Doc1.pdf) to submit your work. 
 ---
