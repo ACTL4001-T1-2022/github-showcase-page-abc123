@@ -22,6 +22,7 @@ R was used to clean/standardise the raw datasets initially.
 > League defending, passing, shooting, salary, and goalkeeping statistics imported from Excel.
 
 ```
+
 install.packages("tidyverse")
 library(tidyverse)
 
@@ -37,9 +38,11 @@ sal21 <- sal21[!duplicated(sal21),]
 sal20 <- sal20[!duplicated(sal20),]
 ```
 
+
 > Data separated based on year (2020 and 2021).
 
 ```
+
 ld21 <- ld %>% filter(Year==2021)
 lg21 <- lg %>% filter(Year==2021)
 lp21 <- lp %>% filter(Year==2021)
@@ -49,11 +52,13 @@ ld20 <- ld %>% filter(Year==2020)
 lg20 <- lg %>% filter(Year==2020)
 lp20 <- lp %>% filter(Year==2020)
 ls20 <- ls %>% filter(Year==2020)
+
 ```
 
 > Defending, shooting, passing, and salary data were then joined onto one dataset. Goalkeeping data separated due to different stats tracked for goalkeepers.
 
 ```
+
 ldp21 <- left_join(ld21,lp21,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldps21 <- left_join(ldp21,ls21,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldpss21 <- left_join(ldps21,sal21,by=c("Player"))
@@ -63,14 +68,17 @@ ldp20 <- left_join(ld20,lp20,by=c("Player","Nation","Pos","Squad","League","Year
 ldps20 <- left_join(ldp20,ls20,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldpss20 <- left_join(ldps20,sal20,by=c("Player"))
 lgs20 <- left_join(lg20,sal20,by=c("Player"))
+
 ```
 
 > N/A and negative data were assumed to be 0, to avoid data issues in modelling steps.
 
 ```
+
 ldpss <- union_all(ldpss20, ldpss21)
 ldpss[is.na(ldpss)] <- 0
 ldpss[is.negative(ldpss)] <- 0
+
 ```
 
 ## Assumptions
