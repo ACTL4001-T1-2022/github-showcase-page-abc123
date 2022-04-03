@@ -117,7 +117,7 @@ ball[is.na(ball)] <- 0
 
 ball_gk <- ball %>% filter(str_detect(ball$Pos, "GK"))
 ```
-> Dataset portioned to training and test set.
+> Dataset portioned to training and test set with an 80:20 split.
 ```
 set.seed(1)
 training_set <- sample(length(ball$Salary), 0.8*length(ball$Salary))
@@ -152,7 +152,6 @@ lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
 > GBM also fit, with results compared to Random Forest
 ```
 b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
-#Best n.tree = 3703 from cv.fold = 10
 b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
 ```
