@@ -74,7 +74,7 @@ ldpss[is.negative(ldpss)] <- 0
 ### Team Selection
 | Factor  | Assumption |
 | ------------- | ------------- |
-| Salary        | Content Cell  |
+| Salary        | Player salaries were used as a proxy for their overall ability, with better players being paid higher salaries.  |
 | Salary Growth  | Content Cell  |
 | Inflation Rates  | Content Cell  |
 | Tournament Performance  | Content Cell  |
