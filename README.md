@@ -1,5 +1,7 @@
 # Actuarial Theory and Practice A
 
+![](messi.gif)
+
 This report discusses the construction of Rarita’s national football team using statistical models and analyses the
 impact of a competitive team on the country’s economy. Data cleaning and standardisation was initially conducted
 to address data concerns. Several foundational assumptions were established before model fitting for team
