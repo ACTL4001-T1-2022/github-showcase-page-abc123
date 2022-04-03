@@ -181,15 +181,19 @@ b_comparison <- abs(b_prob - as.numeric(test$Salary))
 
 ## Risks and Limitations
 
+## Risks and Limitations
+
 Several considerations and risks were excluded from the above analyses, as they were not deemed significant at
 a high-level view and would unnecessarily increase the complexity of the models. However, these factors and their
 potential impacts will be briefly discussed here for completeness of our evaluation.
 
 | Limitation | Implication |
+| ------------- | ------------- |
 | Generating revenue by loaning Raritan players not included in net revenue | Revenues are understated but best estimates show they are sufficient |
 | Only salaries of new players on national teams and inflation considered in expense projections | Currently no consideration for potential fixed costs (e.g. investment in infrastructure). These expenses must be included separately in the future if required | 
 | Team construction dependent on player data and metrics of competing teams, all of which only available for past periods | Opposing teams may improve significantly compared to previous years, which may our benchmarks for teambuilding irrelevant |
 | Players are selected based on league statistics, so only players present in league dataset are considered in team selection | Some teams had a large number of players not present in league data and their team is unable to be evaluated by our metric. We also did not allow selection of non-league players in our team construction | 
+
 
 ## Economic Impacts
 
