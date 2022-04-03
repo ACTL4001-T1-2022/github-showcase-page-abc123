@@ -71,11 +71,11 @@ ldpss[is.negative(ldpss)] <- 0
 
 
 ## Assumptions
-# Team Selection
+### Team Selection
 | Factor  | Assumption |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Salary  | Content Cell  |
+| Salary Growth  | Content Cell  |
 
 
 ## Methodology
