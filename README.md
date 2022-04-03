@@ -10,7 +10,10 @@ impact of a competitive team on the country’s economy. Here, we outline severa
 ## Project Objectives 
 
 The objectives of this project include: 
-* blah
+* Ranking within Football and Sporting Association’s (FSA) top ten members within the next five years and,
+* Having a high probability of winning an FSA championship within the next ten years.
+By developing Rarita’s national football brand, the overarching objective was to achieve positive economic impacts
+for the country over the next 10 years such as GDP growth.
 
 ## Data Cleaning
 
