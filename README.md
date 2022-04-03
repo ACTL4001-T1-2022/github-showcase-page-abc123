@@ -1,4 +1,5 @@
-# Actuarial Theory and Practice A
+# Building a Competitive National Football Team
+##And an Analysis of its Economic Impacts on Rarita
 
 ![](messi.gif)
 
@@ -29,5 +30,5 @@ This is written in markdown language.
 
 More information on GitHub Pages can be found [here](https://pages.github.com/)
 
-![](s02_19352233.jpg)
+
 
