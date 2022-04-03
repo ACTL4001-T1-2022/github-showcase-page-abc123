@@ -100,7 +100,6 @@ forwards <- ldpss %>% filter(position=="F")
 defenders <- ldpss %>% filter(position=="D")
 midfields <- ldpss %>% filter(position=="M")
 goalkeep <- ldpss %>% filter(position=="G")
-
 ```
 
 #### Follow the [guide doc](Doc1.pdf) to submit your work. 
