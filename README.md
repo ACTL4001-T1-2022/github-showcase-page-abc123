@@ -4,22 +4,23 @@
 
 ## Overview
 
-This landing page showcases the methodology behind our construction of Rarita’s national football team using statistical models and analyses the
+This landing page showcases the methodology behind the construction of Rarita’s national football team using statistical models and analyses the
 impact of a competitive team on the country’s economy. Here, we outline several key considerations in our team selection including data cleaning, assumptions, methodology, economic impacts and risks and limitations. 
 
 ## Project Objectives 
 
-The objectives of this project include: 
+The objectives of this project included: 
 * Ranking within Football and Sporting Association’s (FSA) top ten members within the next five years and,
 * Having a high probability of winning an FSA championship within the next ten years.
+
 By developing Rarita’s national football brand, the overarching objective was to achieve positive economic impacts
 for the country over the next 10 years such as GDP growth.
 
 ## Data Cleaning
 
-R was used to clean/standardise the raw datasets initially. 
+R was used to firstly clean/standardise the raw datasets. 
 
-> League defending, passing, shooting, salary, and goalkeeping statistics imported from Excel.
+> League defending, passing, shooting, salary, and goalkeeping statistics were imported from Excel.
 
 ```
 install.packages("tidyverse")
@@ -37,7 +38,7 @@ sal21 <- sal21[!duplicated(sal21),]
 sal20 <- sal20[!duplicated(sal20),]
 ```
 
-> Data separated based on year (2020 and 2021).
+> The data was separated by the associated year (2020 and 2021).
 
 ```
 ld21 <- ld %>% filter(Year==2021)
@@ -51,7 +52,7 @@ lp20 <- lp %>% filter(Year==2020)
 ls20 <- ls %>% filter(Year==2020)
 ```
 
-> Defending, shooting, passing, and salary data were then joined onto one dataset. Goalkeeping data separated due to different stats tracked for goalkeepers.
+> Defending, shooting, passing, and salary data were then joined onto one dataset. Goalkeeping data was separated due to the different set of measured statistics.
 
 ```
 ldp21 <- left_join(ld21,lp21,by=c("Player","Nation","Pos","Squad","League","Year"))
@@ -65,7 +66,7 @@ ldpss20 <- left_join(ldps20,sal20,by=c("Player"))
 lgs20 <- left_join(lg20,sal20,by=c("Player"))
 ```
 
-> N/A and negative data were assumed to be 0, to avoid data issues in modelling steps.
+> N/A and negative data were set to equal 0 to avoid data issues in later modelling steps.
 
 ```
 ldpss <- union_all(ldpss20, ldpss21)
@@ -78,7 +79,7 @@ ldpss[is.negative(ldpss)] <- 0
 
 | Factor | Assumption |
 | :---:  | :---:  |
-| Salary        | Player salaries were used as a proxy for their overall ability, with better players being paid higher salaries.  |
+| Salary        | Player salaries were used as a proxy for their overall ability, with more skilled players being paid higher salaries.  |
 | Salary Growth  | In line with Rarita's inflation rates. |
 | Inflation Rates  | Projected using a moving average of inflation rates from the preceding 5 years.  |
 | Tournament Performance  | Tournament performance is positively correlated with economic impact. |
@@ -99,7 +100,6 @@ ldpss[is.negative(ldpss)] <- 0
 
 ## Team Selection Methodology
 
-
 ### Feature Selection
 A random forest model was developed to predict the salaries of players using their measured statistics to identify high performing players and select the most competitive team for Rarita.
 
@@ -109,6 +109,7 @@ library(randomForest)
 
 ball <- read.csv('ldpssmerged.csv', header = TRUE)
 ```
+
 > Age and league treated as factors in model.
 
 ```
@@ -120,7 +121,8 @@ ball[is.na(ball)] <- 0
 
 ball_gk <- ball %>% filter(str_detect(ball$Pos, "GK"))
 ```
-> Dataset portioned to training and test set with an 80:20 split.
+
+> Dataset portioned into training and test set with an 80:20 split.
 
 ```
 set.seed(1)
@@ -129,7 +131,7 @@ train <- ball[training_set, ]
 test <- ball[-training_set, ]
 ```
 
-> Random Forest using training and testing sets from logistic regression
+> Random Forest model fit using training and testing sets.
 
 ```
 p <- length(ball) - 1 #Number of predictors in the data set
@@ -139,13 +141,12 @@ rf_fit1 <- randomForest(as.numeric(Salary) ~ League + Expected.xG + xA + Tkl.Int
 
 p <- length(train) - 1 #Number of predictors in the data set
 m <- round(sqrt(p))
-rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = train, mtry = m, importance = TRUE)
+rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = test, mtry = m, importance = TRUE)
 
 varImpPlot(rf_fit)
 ```
 
-> A separate model was fit for goalkeepers due to different stats available for them.
-
+> A separate model was fit for goalkeepers due to varying measured statistics.
 
 ```
 p_gk <- length(ball_gk) - 1 #Number of predictors in the data set
@@ -158,8 +159,8 @@ lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
 lm_pred <- predict(lm_fit, test)
 lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
 ```
-> GBM also fit, with results compared to Random Forest
 
+> GBM was also fit, with results compared to Random Forest.
 
 ```
 b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
@@ -167,10 +168,9 @@ b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
 ```
 
-> RF performed similarly to the GBM's, and because GBM's have the potential to overfit, the random forest models were chosen for our feature selection.
-> This model fitting process was repeated by excluding the least important and unstandardised variables (such as aggregated statistics rather than per 90-minute statistics) to prevent overfitting and collinearity amongst predictors.
+It was found that Random Forest performed similarly to GBM, whereby due to the potential for GBMs to overfit, the Random Forest model was chosen for feature selection in identifying top performing players. This model fitting process was repeated by excluding the least important and unstandardised variables (such as aggregated statistics rather than per 90-minute statistics) to prevent overfitting and collinearity amongst predictors.
 
-This ultimately led us to an RF model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
+This ultimately led us to a Random Forest model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
 
 ### Player Metric
 
@@ -200,7 +200,6 @@ This ultimately led us to an RF model that only included the 10 most significant
 | K. Kazlo | Rarita |
 | Z. Nyamahunge | Rarita |
 | F. Ithungu | Rarita |
-
 
 ## Risks and Limitations
 
