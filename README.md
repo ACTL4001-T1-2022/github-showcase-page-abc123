@@ -75,9 +75,11 @@ R was used to firstly clean/standardise the raw datasets.
 > League defending, passing, shooting, salary, and goalkeeping statistics were imported from the case data in Excel: [2022-student-research-case-study-player-data.xlsx](https://github.com/ACTL4001-T1-2022/github-showcase-page-abc123/files/8442757/2022-student-research-case-study-player-data.xlsx)
 
 ```
+#Load packages
 install.packages("tidyverse")
 library(tidyverse)
 
+#Load data
 ld <- read.csv("ld.csv",header=T,stringsAsFactors=T)
 lg <- read.csv("lg.csv",header=T,stringsAsFactors=T)
 lp <- read.csv("lp.csv",header=T,stringsAsFactors=T)
@@ -86,36 +88,37 @@ ls <- read.csv("ls.csv",header=T,stringsAsFactors=T)
 sal20 <- read.csv("sal20.csv",header=T,stringsAsFactors = T)
 sal21 <- read.csv("sal21.csv",header=T,stringsAsFactors = T)
 
-sal21 <- sal21[!duplicated(sal21),]
+#Remove duplicated data points
 sal20 <- sal20[!duplicated(sal20),]
+sal21 <- sal21[!duplicated(sal21),]
 ```
 
 > The data was separated by the associated year (2020 and 2021).
 
 ```
-ld21 <- ld %>% filter(Year==2021)
-lg21 <- lg %>% filter(Year==2021)
-lp21 <- lp %>% filter(Year==2021)
-ls21 <- ls %>% filter(Year==2021)
-
 ld20 <- ld %>% filter(Year==2020)
 lg20 <- lg %>% filter(Year==2020)
 lp20 <- lp %>% filter(Year==2020)
 ls20 <- ls %>% filter(Year==2020)
+
+ld21 <- ld %>% filter(Year==2021)
+lg21 <- lg %>% filter(Year==2021)
+lp21 <- lp %>% filter(Year==2021)
+ls21 <- ls %>% filter(Year==2021)
 ```
 
-> Defending, shooting, passing, and salary data were then joined onto one dataset. Goalkeeping data was separated due to the different set of measured statistics.
+> Defending, shooting, passing, and salary data were then joined to create a single dataset. Goalkeeping data was separated due to the different set of measured statistics.
 
 ```
-ldp21 <- left_join(ld21,lp21,by=c("Player","Nation","Pos","Squad","League","Year"))
-ldps21 <- left_join(ldp21,ls21,by=c("Player","Nation","Pos","Squad","League","Year"))
-ldpss21 <- left_join(ldps21,sal21,by=c("Player"))
-lgs21 <- left_join(lg21,sal21,by=c("Player"))
-
 ldp20 <- left_join(ld20,lp20,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldps20 <- left_join(ldp20,ls20,by=c("Player","Nation","Pos","Squad","League","Year"))
 ldpss20 <- left_join(ldps20,sal20,by=c("Player"))
 lgs20 <- left_join(lg20,sal20,by=c("Player"))
+
+ldp21 <- left_join(ld21,lp21,by=c("Player","Nation","Pos","Squad","League","Year"))
+ldps21 <- left_join(ldp21,ls21,by=c("Player","Nation","Pos","Squad","League","Year"))
+ldpss21 <- left_join(ldps21,sal21,by=c("Player"))
+lgs21 <- left_join(lg21,sal21,by=c("Player"))
 ```
 
 > N/A and negative data were set to equal 0 to avoid data issues in later modelling steps.
