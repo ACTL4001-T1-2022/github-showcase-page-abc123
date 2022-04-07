@@ -10,10 +10,12 @@
     <li>
       <a href="#project-objectives">Project Objectives</a>
     </li>
+    <li>
   <ol>
     <li>
       <a href="#data-cleaning">Data Cleaning</a>
     </li>
+    <li>
   <ol>
     <li>
       <a href="#assumptions">Assumptions</a>
@@ -33,6 +35,7 @@
         <li><a href="#implementation-plan">Implementation Plan</a></li>
       </ol>
      </li>
+     <li>
    <ol>
     <li>
       <a href="#economic-impacts">Economic Impacts</a>
@@ -42,10 +45,12 @@
         <li><a href="#sensitivity-analysis">Sensitivity Analysis</a></li>
       </ol>
     </li>
-   <ol>
+    <li>
+  <ol>
     <li>
       <a href="#risks-and-mitigations">Risks and Mitigations</a>
     </li>
+    <li>
   </ol>
 </details>
 
