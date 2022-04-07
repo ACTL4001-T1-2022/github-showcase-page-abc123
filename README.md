@@ -263,6 +263,8 @@ This ultimately led us to a Random Forest model that only included the 10 most s
 
 ### Implementation Plan
 
+![](implementation timeline.png)
+
 ## Economic Impacts 
 
 ### GDP Projections
