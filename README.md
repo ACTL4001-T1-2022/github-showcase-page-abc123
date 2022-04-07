@@ -301,6 +301,15 @@ inaccurate projections.
 
 ### Sensitivity Analysis 
 
+![](be_sens.png)
+
+![](be_sens1.png)
+
+![](low_sens.png)
+
+![](low_sens1.png)
+
+
 ## Risks and Limitations
 
 Several considerations and risks were excluded from the above analyses, as they were not deemed significant at
