@@ -250,6 +250,8 @@ Based on the results above, the following player statistics were chosen:
 |Clr| Clearances|
 |Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|
 
+A weighted average of the selected statistics was the final metric used to evaluate the players. The weights were formulated as a proportion of their respective variance importance figures in the random forest model. For players exhibiting similar metric figures, the cheaper player was chosen as they provided more "value" on a per dollar basis. The National Football Team selected can be viewed below.
+
 ### Comparison Against Competitors
 
 ### National Football Team Selected
