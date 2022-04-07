@@ -192,7 +192,7 @@ test <- ball[-training_set, ]
 
 ```
 #Model fitting on training set
-p <- length(ball) - 1 #Number of predictors in the data set
+p <- length(ball) - 1     #Number of predictors in the data set
 m <- round(sqrt(p))
 rf_fit <- randomForest(as.numeric(Salary) ~ ., data = train, mtry = m, importance = TRUE)
 varImpPlot(rf_fit)
@@ -202,7 +202,7 @@ rf_fit1 <- randomForest(as.numeric(Salary) ~ League + Pressures.Def.3rd + Pressu
 varImpPlot(rf_fit1)
 
 #Model fitting on testing set
-p <- length(train) - 1 #Number of predictors in the data set
+p <- length(train) - 1     #Number of predictors in the data set
 m <- round(sqrt(p))
 rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = test, mtry = m, importance = TRUE)
 
@@ -214,15 +214,10 @@ varImpPlot(rf_fit1_test)
 > A separate model was fit for goalkeepers due to varying measured statistics.
 
 ```
-p_gk <- length(ball_gk) - 1 #Number of predictors in the data set
+p_gk <- length(ball_gk) - 1     #Number of predictors in the data set
 m_gk <- round(sqrt(p_gk))
 rf_fit_gk <- randomForest(as.numeric(Salary) ~ ., data = ball_gk, mtry = m_gk, importance = TRUE, na.action = na.roughfix)
-
 varImpPlot(rf_fit_gk)
-
-lm_fit <- lm(log(as.numeric(Salary)) ~ ., data = train)
-lm_pred <- predict(lm_fit, test)
-lm_comparison <- abs(lm_pred - as.numeric(test$Salary))
 ```
 
 > GBM was also fit, with results compared to Random Forest.
@@ -237,12 +232,9 @@ It was found that Random Forest performed similarly to GBM, whereby due to the p
 
 This ultimately led us to a Random Forest model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
 
-![](varimp.png)
-
-> Above shows the variable importance of the predictors that were included in our final tree, and these were used to construct our player evaluation metric.
-
 ### Player Metric
-Based on the results above, the following player statistics were chosen:
+![](varimp.png)
+Based on the variable importance results above, the following player statistics were chosen:
 
 | Statistic | Definition|
 | :---:  | :---:|
