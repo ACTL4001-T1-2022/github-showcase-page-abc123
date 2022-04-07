@@ -201,6 +201,16 @@ This ultimately led us to a Random Forest model that only included the 10 most s
 | Z. Nyamahunge | Rarita |
 | F. Ithungu | Rarita |
 
+### Implementation Plan
+
+## Economic Impacts 
+
+### GDP Projections
+
+### Net Revenue Projections
+
+### Sensitivity Analysis 
+
 ## Risks and Limitations
 
 Several considerations and risks were excluded from the above analyses, as they were not deemed significant at
