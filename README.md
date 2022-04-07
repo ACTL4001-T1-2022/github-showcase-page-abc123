@@ -236,6 +236,20 @@ It was found that Random Forest performed similarly to GBM, whereby due to the p
 This ultimately led us to a Random Forest model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
 
 ### Player Metric
+Based on the results above, the following player statistics were chosen:
+
+| Statistic | Definition|
+| :---:  | :---:|
+| Expected.npxG | Non-penalty expected goals|
+| Standard.Sh.90 |Shots total per 90 minutes|
+| KP | Passes leading to a shot|
+|Long.Att| Passes >30 yards attempted|
+|Int| Interceptions|
+|Pressures.Def.3rd| Pressure applied to opponent in the defensive 1/3|
+|Standard.SoT.90| Shots on target per 90 minutes|
+|Pressures.Att.3rd| Pressure applied to opponent in the attacking 1/3|
+|Clr| Clearances|
+|Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|
 
 ### Comparison Against Competitors
 
