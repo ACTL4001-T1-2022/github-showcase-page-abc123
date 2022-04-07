@@ -2,7 +2,13 @@
 
 ![](soccer.gif)
 
-### Table of Contents
+## Group Members
+* Lenny Han - z5258272
+* Thomas Jiang - z5255865
+* Zekai (Eric) Kuang - z5256982
+* Celina Mak - z5255598
+
+## Table of Contents
 <!-- TABLE OF CONTENTS -->
 <details open>
   <summary style = "font-size:13pt;">Table of Contents</summary>
@@ -47,12 +53,6 @@
     <li>
   </ol>
 </details>
-
-### Group Members
-* Lenny Han
-* Thomas Jiang
-* Eric Kuang
-* Celina Mak
 
 ## Overview
 
@@ -186,16 +186,24 @@ test <- ball[-training_set, ]
 > Random Forest model fit using training and testing sets.
 
 ```
+#Model fitting on training set
 p <- length(ball) - 1 #Number of predictors in the data set
 m <- round(sqrt(p))
-rf_fit <- randomForest(as.numeric(Salary) ~ ., data = ball, mtry = m, importance = TRUE)
-rf_fit1 <- randomForest(as.numeric(Salary) ~ League + Expected.xG + xA + Tkl.Int, data = ball, mtry = 2, importance = TRUE)
+rf_fit <- randomForest(as.numeric(Salary) ~ ., data = train, mtry = m, importance = TRUE)
+varImpPlot(rf_fit)
 
+#Re-run random forest model after selecting most important variables
+rf_fit1 <- randomForest(as.numeric(Salary) ~ League + Pressures.Def.3rd + Pressures.Mid.3rd + Pressures.Att.3rd + Int + Clr + Long.Att + KP + Standard.Sh.90 + Standard.SoT.90 + Expected.npxG, data = train, mtry = m, importance = TRUE)
+varImpPlot(rf_fit1)
+
+#Model fitting on testing set
 p <- length(train) - 1 #Number of predictors in the data set
 m <- round(sqrt(p))
 rf_fit_test <- randomForest(as.numeric(Salary) ~ ., data = test, mtry = m, importance = TRUE)
 
-varImpPlot(rf_fit)
+#Re-run random forest model after selecting most important variables
+rf_fit1_test <- randomForest(as.numeric(Salary) ~ League + Pressures.Def.3rd + Pressures.Mid.3rd + Pressures.Att.3rd + Int + Clr + Long.Att + KP + Standard.Sh.90 + Standard.SoT.90 + Expected.npxG, data = test, mtry = m, importance = TRUE)
+varImpPlot(rf_fit1_test)
 ```
 
 > A separate model was fit for goalkeepers due to varying measured statistics.
