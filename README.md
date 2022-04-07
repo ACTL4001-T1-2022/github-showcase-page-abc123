@@ -1,3 +1,8 @@
+# Building a Competitive National Football Team
+
+![](soccer.gif)
+
+## Table of Contents
 <!-- TABLE OF CONTENTS -->
 <details open>
   <summary style = "font-size:13pt;">Table of Contents</summary>
@@ -43,9 +48,11 @@
   </ol>
 </details>
 
-# Building a Competitive National Football Team
-
-![](soccer.gif)
+## Group Members
+* Lenny Han
+* Thomas Jiang
+* Eric Kuang
+* Celina Mak
 
 ## Overview
 
