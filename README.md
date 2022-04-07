@@ -256,6 +256,8 @@ A weighted average of the selected statistics was the final metric used to evalu
 
 ![](metric_rank.png)
 
+Table for variability of shit and confidence intervals/prob of success
+
 ### National Football Team Selected
 
 | Player | Nation |
