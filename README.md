@@ -33,7 +33,7 @@
       <a href="#team-selection-methodology">Team Selection Methodology</a>
       <ol>
         <li><a href="#feature-selection">Soccer Power Index</a></li>
-        <li><a href="#player-metric">Variables</a></li>
+        <li><a href="#player-metric">Player Metric</a></li>
         <li><a href="#comparison-against-competitors">Comparison Against Competitors</a></li>
         <li><a href="#national-football-team-selected">National Football Team Selected</a></li>
         <li><a href="#implementation-plan">Implementation Plan</a></li>
