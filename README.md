@@ -1,3 +1,49 @@
+<!-- TABLE OF CONTENTS -->
+<details open>
+  <summary style = "font-size:13pt;">Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#overview">Overview</a>
+    </li>
+    <li>
+  <ol>
+    <li>
+      <a href="#project-objectives">Project Objectives</a>
+    </li>
+    <li>
+      <a href="#data-cleaning">Data Cleaning</a>
+    </li>
+    <li>
+      <a href="#assumptions">Assumptions</a>
+      <ol>
+        <li><a href="#team-selection">Team Selection</a></li>
+        <li><a href="#economic-impact">Economic Impact</a></li>
+      </ol>
+    </li>
+    <li>
+      <a href="#team-selection-methodology">Team Selection Methodology</a>
+      <ol>
+        <li><a href="#feature-selection">Soccer Power Index</a></li>
+        <li><a href="#player-metric">Variables</a></li>
+        <li><a href="#comparison-against-competitors">Comparison Against Competitors</a></li>
+        <li><a href="#national-football-team-selected">National Football Team Selected</a></li>
+        <li><a href="#implementation-plan">Implementation Plan</a></li>
+      </ol>
+     </li>
+    <li>
+      <a href="#economic-impacts">Economic Impacts</a>
+      <ol>
+        <li><a href="#gdp-projections">GDP Projections</a></li>
+        <li><a href="#net-revenue-projections">Net Revenue Projections</a></li>
+        <li><a href="#sensitivity-analysis">Sensitivity Analysis</a></li>
+      </ol>
+    </li>
+    <li>
+      <a href="#risks-and-mitigations">Risks and Mitigations</a>
+    </li>
+  </ol>
+</details>
+
 # Building a Competitive National Football Team
 
 ![](soccer.gif)
@@ -224,7 +270,6 @@ potential impacts will be briefly discussed here for completeness of our evaluat
 | Team construction dependent on player data and metrics of competing teams, all of which only available for past periods | Opposing teams may improve significantly compared to previous years, which may our benchmarks for teambuilding irrelevant |
 | Players are selected based on league statistics, so only players present in league dataset are considered in team selection | Some teams had a large number of players not present in league data and their team is unable to be evaluated by our metric. We also did not allow selection of non-league players in our team construction | 
 
-## Economic Impacts
 
 
 ![](200w.gif)
