@@ -288,9 +288,7 @@ monitor progress over the next 10 years, as illustrated below.
 ![](implementation_timeline.png)
 
 The constructed implementation timeline has regular monitoring efforts and flexibility to adapt to changing
-circumstances which lends well to mitigating key risks. These key risks include Rarita’s national team becoming
-uncompetitive, growth of competitors’ abilities, increased prices to loan players from external countries and
-inaccurate projections.
+circumstances that could otherwise lead to adverse effects for the team. 
 
 ## Economic Impacts 
 
@@ -313,6 +311,14 @@ inaccurate projections.
 
 
 ## Risks and Limitations
+
+Through continual monitoring efforts as shown in our implementation timeline, key risks can be mitigated. 
+These key risks include Rarita’s national team becoming uncompetitive, growth of competitors’ abilities, increased prices to loan players from external countries and inaccurate projections.
+
+Furthermore, political risks can have negative implications on Rarita’s national team. The most notable
+consequence would be the prohibition of loaning external players which could reduce the competitiveness of
+Rarita’s team. However, the metric system designed would allow Rarita to quickly identify appropriate substitute
+players with constant monitoring to review the team’s performance.
 
 Several considerations and risks were excluded from the above analyses, as they were not deemed significant at
 a high-level view and would unnecessarily increase the complexity of the models. However, these factors and their
