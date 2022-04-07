@@ -188,7 +188,7 @@ train <- ball[training_set, ]
 test <- ball[-training_set, ]
 ```
 
-> Random Forest model fit using training and testing sets.
+> Random Forest model for forwards, midfielders, and defenders fit using training and testing sets.
 
 ```
 #Model fitting on training set
@@ -211,7 +211,7 @@ rf_fit1_test <- randomForest(as.numeric(Salary) ~ League + Pressures.Def.3rd + P
 varImpPlot(rf_fit1_test)
 ```
 
-> A separate model was fit for goalkeepers due to varying measured statistics.
+> A separate random forest model was fit for goalkeepers due to varying measured statistics.
 
 ```
 p_gk <- length(ball_gk) - 1     #Number of predictors in the data set
@@ -223,14 +223,20 @@ varImpPlot(rf_fit_gk)
 > GBM was also fit, with results compared to Random Forest.
 
 ```
+#For forwards, midfielders and defenders
 b_fit <- gbm(Salary ~ ., data = train, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
 b_prob <- predict(b_fit, newdata= test, n.trees = which.min(b_fit$cv.error))
 b_comparison <- abs(b_prob - as.numeric(test$Salary))
+
+#For goalkeepers
+b_fit_gk <- gbm(Salary ~ ., data = ball_gk, distribution = 'gaussian', n.trees = 5000, interaction.depth = 3, shrinkage = 0.01, cv.folds = 10)
+b_prob_gk <- predict(b_fit_gk, newdata= ball_gk, n.trees = which.min(b_fit$cv.error))
+b_comparison_gk <- abs(b_prob_gk - as.numeric(test$Salary))
 ```
 
 It was found that Random Forest performed similarly to GBM, whereby due to the potential for GBMs to overfit, the Random Forest model was chosen for feature selection in identifying top performing players. This model fitting process was repeated by excluding the least important and unstandardised variables (such as aggregated statistics rather than per 90-minute statistics) to prevent overfitting and collinearity amongst predictors.
 
-This ultimately led us to a Random Forest model that only included the 10 most significant predictors (excluding League) of player salary, which were then used to build our player metric.
+This ultimately led us to a Random Forest model that only included the most significant predictors of player salary, which were then used to build our player metric. 
 
 ### Player Metric
 ![](varimp.png)
