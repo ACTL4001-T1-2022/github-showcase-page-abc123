@@ -237,6 +237,10 @@ It was found that Random Forest performed similarly to GBM, whereby due to the p
 
 This ultimately led us to a Random Forest model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
 
+![](varimp.png)
+
+> Above shows the variable importance of the predictors that were included in our final tree, and these were used to construct our player evaluation metric.
+
 ### Player Metric
 Based on the results above, the following player statistics were chosen:
 
