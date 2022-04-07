@@ -330,7 +330,11 @@ In addition to risks, key limitations were also considered which are detailed in
 | Team construction dependent on player data and metrics of competing teams, all of which only available for past periods | Opposing teams may improve significantly compared to previous years, which may our benchmarks for teambuilding irrelevant |
 | Players are selected based on league statistics, so only players present in league dataset are considered in team selection | Some teams had a large number of players not present in league data and their team is unable to be evaluated by our metric. We also did not allow selection of non-league players in our team construction | 
 
+## Conclusion
 
+In conclusion, a competitive national team was constructed for Rarita using a metric developed from chosen
+statistics. The key objectives of achieving competitiveness were successfully met as Rarita’s national team is projected to continue improving and
+adapting to the future competition environment, espeically through the development of our player metric and continual monitoring. Overall, Rarita’s national team will build a brand for the country’s football program and achieve positive economic impacts for the country.
 
 ![](200w.gif)
 
