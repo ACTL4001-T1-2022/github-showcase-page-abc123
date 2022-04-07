@@ -50,7 +50,6 @@
     <li>
       <a href="#risks-and-mitigations">Risks and Mitigations</a>
     </li>
-    <li>
   </ol>
 </details>
 
