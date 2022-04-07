@@ -236,12 +236,12 @@ b_comparison_gk <- abs(b_prob_gk - as.numeric(test$Salary))
 
 It was found that Random Forest performed similarly to GBM, whereby due to the potential for GBMs to overfit, the Random Forest model was chosen for feature selection in identifying top performing players. This model fitting process was repeated by excluding the least important and unstandardised variables (such as aggregated statistics rather than per 90-minute statistics) to prevent overfitting and collinearity amongst predictors.
 
-The most significant predictors were determined by setting a lower bound for its contribution to % of variance explained, predictors below this threshold were removed. This ultimately led us to a Random Forest model that only included the most significant predictors of player salary, which were then used to build our player metric. 
+The most significant predictors were determined by setting a lower bound for its contribution to percentage of variance explained, predictors below this threshold were removed. This ultimately led us to a Random Forest model that only included the most significant predictors of player salary, which were then used to build our player metric. 
 
 ### Player Metric
 ![](varimp.png)
 
-Based on the variable importance results above, the following player statistics were chosen for non-goalkeepers:
+Based on the variable importance results above, the following player statistics were chosen for forwards, midfielders, and defenders:
 
 | Statistic | Definition| Variable Importance Weighting|
 | :---:  | :---:|:---:|
