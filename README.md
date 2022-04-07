@@ -10,9 +10,11 @@
     <li>
       <a href="#project-objectives">Project Objectives</a>
     </li>
+  <ol>
     <li>
       <a href="#data-cleaning">Data Cleaning</a>
     </li>
+  <ol>
     <li>
       <a href="#assumptions">Assumptions</a>
       <ol>
@@ -20,6 +22,7 @@
         <li><a href="#economic-impact">Economic Impact</a></li>
       </ol>
     </li>
+   <ol>
     <li>
       <a href="#team-selection-methodology">Team Selection Methodology</a>
       <ol>
@@ -30,6 +33,7 @@
         <li><a href="#implementation-plan">Implementation Plan</a></li>
       </ol>
      </li>
+   <ol>
     <li>
       <a href="#economic-impacts">Economic Impacts</a>
       <ol>
@@ -38,6 +42,7 @@
         <li><a href="#sensitivity-analysis">Sensitivity Analysis</a></li>
       </ol>
     </li>
+   <ol>
     <li>
       <a href="#risks-and-mitigations">Risks and Mitigations</a>
     </li>
