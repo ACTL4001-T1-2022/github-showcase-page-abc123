@@ -256,6 +256,18 @@ Based on the variable importance results above, the following player statistics 
 |Clr| Clearances|0.0719|
 |Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|0.0714|
 
+ADD GK VAR IMP
+
+Based on the variable importance results above, the following player statistics were chosen for goalkeepers:
+
+| Statistic | Definition| Variable Importance Weighting|
+| :---:  | :---:|:---:|
+| PlayingTime90s|Minutes played per 90 minutes| 0.1190
+|PerformanceGA90|Goals against per 90 minutes|0.1988|
+|PerformanceSoTA|Shots on target against|0.1269|
+|PerformanceSavePerc|Shots saved as a % of shots on target against|0.4046|
+|PerformanceCSPerc|% Match with clean sheet|0.1508|
+
 A weighted average of the selected statistics was the final metric used to evaluate the players. The weights were formulated as a proportion of their respective variance importance figures in the random forest model. For players exhibiting similar metric figures, the cheaper player was chosen as they provided more "value" on a per dollar basis. The National Football Team selected can be viewed below.
 
 ### Comparison Against Competitors
