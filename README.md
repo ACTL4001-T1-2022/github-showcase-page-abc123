@@ -241,20 +241,20 @@ This ultimately led us to a Random Forest model that only included the most sign
 ### Player Metric
 ![](varimp.png)
 
-Based on the variable importance results above, the following player statistics were chosen:
+Based on the variable importance results above, the following player statistics were chosen for non-goalkeepers:
 
-| Statistic | Definition|
-| :---:  | :---:|
-| Expected.npxG | Non-penalty expected goals|
-| Standard.Sh.90 |Shots total per 90 minutes|
-| KP | Passes leading to a shot|
-|Long.Att| Passes >30 yards attempted|
-|Int| Interceptions|
-|Pressures.Def.3rd| Pressure applied to opponent in the defensive 1/3|
-|Standard.SoT.90| Shots on target per 90 minutes|
-|Pressures.Att.3rd| Pressure applied to opponent in the attacking 1/3|
-|Clr| Clearances|
-|Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|
+| Statistic | Definition| Variable Importance Weighting|
+| :---:  | :---:|:---:|
+| Expected.npxG | Non-penalty expected goals| 0.1729|
+| Standard.Sh.90 |Shots total per 90 minutes|0.1378|
+| KP | Passes leading to a shot|0.1155|
+|Long.Att| Passes >30 yards attempted|0.0755|
+|Int| Interceptions|0.1015|
+|Pressures.Def.3rd| Pressure applied to opponent in the defensive 1/3|0.0533|
+|Standard.SoT.90| Shots on target per 90 minutes|0.0937|
+|Pressures.Att.3rd| Pressure applied to opponent in the attacking 1/3|0.1065|
+|Clr| Clearances|0.0719|
+|Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|0.0714|
 
 A weighted average of the selected statistics was the final metric used to evaluate the players. The weights were formulated as a proportion of their respective variance importance figures in the random forest model. For players exhibiting similar metric figures, the cheaper player was chosen as they provided more "value" on a per dollar basis. The National Football Team selected can be viewed below.
 
