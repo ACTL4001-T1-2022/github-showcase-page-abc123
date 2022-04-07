@@ -263,7 +263,16 @@ This ultimately led us to a Random Forest model that only included the 10 most s
 
 ### Implementation Plan
 
+An implementation plan was created to facilitate ongoing monitoring and respond quickly to changing circumstances
+and emerging risks which will ensure a competitive football team. This was created as an annual framework to
+monitor progress over the next 10 years, as illustrated below. 
+
 ![](implementation_timeline.png)
+
+The constructed implementation timeline has regular monitoring efforts and flexibility to adapt to changing
+circumstances which lends well to mitigating key risks. These key risks include Rarita’s national team becoming
+uncompetitive, growth of competitors’ abilities, increased prices to loan players from external countries and
+inaccurate projections.
 
 ## Economic Impacts 
 
