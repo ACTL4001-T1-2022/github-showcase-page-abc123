@@ -295,6 +295,7 @@ circumstances that could otherwise lead to adverse effects for the team.
 ### GDP Projections
 
 ### Net Revenue Projections and Expected NPV
+![](assump.png)
 
 
 ![](BE.png)
