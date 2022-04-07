@@ -262,7 +262,7 @@ A weighted average of the selected statistics was the final metric used to evalu
 
 An equivalent team metric was calculated for the selected team as well as the top-10 nations in the 2021 Tournament. 
 
-![](TeamRankVsMetric.PNG)
+![](metric_rank.PNG)
 
 Higher ranking teams typically exhibited larger metric scores, confirming the metric's validity and accuracy in evaluating player and overall team performance. The selected team produced an average metric of 1.271 with a standard deviation of 0.323. Using a normal approximation, this yielded a lower bound of 0.638 for a 95% confidence interval, and a lower bound of 0.441 for a 99% confidence interval. In comparison to the participating nations in the 2021 Tournament, the selected team yielded a 95.818% and a 9.510% probability of a top-5 and first-place finish respectively. Althought the chosen metric may not accurately project the future performance of all teams, the probability measures strongly suggests Rarita's team can consistently outperform the tournament participants based on their 2021 Tournament performance. Thus, the "competitive" criteria of the objective can be satisfied.
 
