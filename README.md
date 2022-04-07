@@ -254,6 +254,8 @@ A weighted average of the selected statistics was the final metric used to evalu
 
 ### Comparison Against Competitors
 
+![](metric_rank.png)
+
 ### National Football Team Selected
 
 | Player | Nation |
