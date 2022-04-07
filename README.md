@@ -254,25 +254,6 @@ A weighted average of the selected statistics was the final metric used to evalu
 
 ### Comparison Against Competitors
 
-Based on the results above, the following player statistics were chosen:
-
-| Statistic | Definition|
-| :---:  | :---:|
-| Expected.npxG | Non-penalty expected goals|
-| Standard.Sh.90 |Shots total per 90 minutes|
-| KP | Passes leading to a shot|
-|Long.Att| Passes >30 yards attempted|
-|Int| Interceptions|
-|Pressures.Def.3rd| Pressure applied to opponent in the defensive 1/3|
-|Standard.SoT.90| Shots on target per 90 minutes|
-|Pressures.Att.3rd| Pressure applied to opponent in the attacking 1/3|
-|Clr| Clearances|
-|Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|
-
-A weighted average of the selected statistics was the final metric used to evaluate the players. The weights were formulated as a proportion of their respective variance importance figures in the random forest model. For players exhibiting similar metric figures, the cheaper player was chosen as they provided more "value" on a per dollar basis. The National Football Team selected can be viewed below.
-
-### Comparison Against Competitors
-
 An equivalent team metric was calculated for the selected team as well as the top-10 nations in the 2021 Tournament. 
 
 ![](metric_rank.png)
