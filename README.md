@@ -254,9 +254,30 @@ A weighted average of the selected statistics was the final metric used to evalu
 
 ### Comparison Against Competitors
 
+Based on the results above, the following player statistics were chosen:
+
+| Statistic | Definition|
+| :---:  | :---:|
+| Expected.npxG | Non-penalty expected goals|
+| Standard.Sh.90 |Shots total per 90 minutes|
+| KP | Passes leading to a shot|
+|Long.Att| Passes >30 yards attempted|
+|Int| Interceptions|
+|Pressures.Def.3rd| Pressure applied to opponent in the defensive 1/3|
+|Standard.SoT.90| Shots on target per 90 minutes|
+|Pressures.Att.3rd| Pressure applied to opponent in the attacking 1/3|
+|Clr| Clearances|
+|Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|
+
+A weighted average of the selected statistics was the final metric used to evaluate the players. The weights were formulated as a proportion of their respective variance importance figures in the random forest model. For players exhibiting similar metric figures, the cheaper player was chosen as they provided more "value" on a per dollar basis. The National Football Team selected can be viewed below.
+
+### Comparison Against Competitors
+
+An equivalent team metric was calculated for the selected team as well as the top-10 nations in the 2021 Tournament. 
+
 ![](metric_rank.png)
 
-Table for variability of shit and confidence intervals/prob of success
+Higher ranking teams typically exhibited larger metric scores, confirming the metric's validity and accuracy in evaluating player and overall team performance. The selected team produced an average metric of 1.271 with a standard deviation of 0.323. Using a normal approximation, this yielded a lower bound of 0.638 for a 95% confidence interval, and a lower bound of 0.441 for a 99% confidence interval. In comparison to the participating nations in the 2021 Tournament, the selected team yielded a 95.818% and a 9.510% probability of a top-5 and first-place finish respectively. Althought the chosen metric may not accurately project the future performance of all teams, the probability measures strongly suggests Rarita's team can consistently outperform the tournament participants based on their 2021 Tournament performance. Thus, the "competitive" criteria of the objective can be satisfied.
 
 ### National Football Team Selected
 
