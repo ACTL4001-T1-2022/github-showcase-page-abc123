@@ -321,9 +321,7 @@ consequence would be the prohibition of loaning external players which could red
 Rarita’s team. However, the metric system designed would allow Rarita to quickly identify appropriate substitute
 players with constant monitoring to review the team’s performance.
 
-Several considerations and risks were excluded from the above analyses, as they were not deemed significant at
-a high-level view and would unnecessarily increase the complexity of the models. However, these factors and their
-potential impacts will be briefly discussed here for completeness of our evaluation.
+Additional considerations and risks are detailed in the table below. 
 
 | Limitation | Implication |
 | :---: | :---: |
