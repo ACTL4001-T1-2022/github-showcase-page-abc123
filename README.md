@@ -336,7 +336,7 @@ circumstances that could otherwise lead to adverse effects for the team.
 
 
 ## Risks and Limitations
-![](risk.jpeg)
+![](risk.png)
 
 Through continual monitoring efforts as shown in our implementation timeline, key risks can be mitigated. 
 These key risks include Rarita’s national team becoming uncompetitive, growth of competitors’ abilities, increased prices to loan players from external countries and inaccurate projections.
