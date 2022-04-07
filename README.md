@@ -48,7 +48,10 @@
       </ol>
     </li>
     <li>
-      <a href="#risks-and-mitigations">Risks and Mitigations</a>
+      <a href="#risks-and-limitations">Risks and Limitations</a>
+    </li>
+    <li>
+      <a href="#conclusion">Conclusion</a>
     </li>
   </ol>
 </details>
