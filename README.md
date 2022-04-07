@@ -2,7 +2,7 @@
 
 ![](soccer.gif)
 
-## Table of Contents
+### Table of Contents
 <!-- TABLE OF CONTENTS -->
 <details open>
   <summary style = "font-size:13pt;">Table of Contents</summary>
@@ -48,7 +48,7 @@
   </ol>
 </details>
 
-## Group Members
+### Group Members
 * Lenny Han
 * Thomas Jiang
 * Eric Kuang
