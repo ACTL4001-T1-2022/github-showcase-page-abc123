@@ -230,7 +230,7 @@ b_comparison <- abs(b_prob - as.numeric(test$Salary))
 
 It was found that Random Forest performed similarly to GBM, whereby due to the potential for GBMs to overfit, the Random Forest model was chosen for feature selection in identifying top performing players. This model fitting process was repeated by excluding the least important and unstandardised variables (such as aggregated statistics rather than per 90-minute statistics) to prevent overfitting and collinearity amongst predictors.
 
-This ultimately led us to a Random Forest model that only included the 10 most significant predictors of player salary, which were then used to build our player metric.
+This ultimately led us to a Random Forest model that only included the 10 most significant predictors (excluding League) of player salary, which were then used to build our player metric.
 
 ### Player Metric
 ![](varimp.png)
