@@ -234,6 +234,7 @@ This ultimately led us to a Random Forest model that only included the 10 most s
 
 ### Player Metric
 ![](varimp.png)
+
 Based on the variable importance results above, the following player statistics were chosen:
 
 | Statistic | Definition|
