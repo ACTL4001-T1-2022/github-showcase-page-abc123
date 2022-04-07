@@ -60,7 +60,7 @@ This landing page showcases the methodology behind the construction of Rarita’
 impact of a competitive team on the country’s economy. Here, we outline several key considerations in our team selection including data cleaning, assumptions, methodology, economic impacts and risks and limitations. 
 
 ## Project Objectives 
-
+![](objectives.jpeg)
 The objectives of this project included: 
 * Ranking within Football and Sporting Association’s (FSA) top ten members within the next five years and,
 * Having a high probability of winning an FSA championship within the next ten years.
