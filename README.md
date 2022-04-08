@@ -336,6 +336,7 @@ circumstances that could otherwise lead to adverse effects for the team.
 
 
 ## Risks and Limitations
+
 ![](risk.png)
 
 Through continual monitoring efforts as shown in our implementation timeline, key risks can be mitigated. 
@@ -361,5 +362,5 @@ In conclusion, a competitive national team was constructed for Rarita using a me
 statistics. The key objectives of achieving competitiveness were successfully met as Rarita’s national team is projected to continue improving and
 adapting to the future competition environment, espeically through the development of our player metric and continual monitoring. Overall, Rarita’s national team will build a brand for the country’s football program and achieve positive economic impacts for the country.
 
-![](200w.gif)
+
 
