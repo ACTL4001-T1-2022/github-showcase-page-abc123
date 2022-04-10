@@ -381,7 +381,7 @@ via instruments such as interest rate swaps and duration matching between assets
 
 ## Risks and Limitations
 
-![](risk.png)
+![](risks.jpeg)
 
 Through continual monitoring efforts as shown in our implementation timeline, key risks can be mitigated. 
 These key risks include Rarita’s national team becoming uncompetitive, growth of competitors’ abilities, increased prices to loan players from external countries and inaccurate projections.
