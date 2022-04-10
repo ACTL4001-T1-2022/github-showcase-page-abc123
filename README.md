@@ -360,6 +360,8 @@ In the baseline scenario (5% p.a. growth in social media), the most significant 
 In the event of a 1.25% rise in annual inflation, the baseline estimate leads to a negative NPV regardless of changes in broadcast revenue growth. Interest rates and broadcast revenue growth appear less significant, with NPV projected as positive even with a 5% rise and -1.25% shock to both assumptions respectively. 
 
 #### Low Social Media Growth Scenario
+![](low.png)
+
 
 Sensitivity tests were also conducted for a pessimistic scenario for social media growth (2% p.a. growth in social media). 
 
