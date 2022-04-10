@@ -238,7 +238,7 @@ It was found that Random Forest performed similarly to GBM, whereby due to the p
 
 The most significant predictors were determined by setting a lower bound for its contribution to percentage of variance explained, predictors below this threshold were removed. This ultimately led us to a Random Forest model that only included the most significant predictors of player salary, which were then used to build our player metric. 
 
-### Player Metric
+### Player Metrics
 
 #### Forwards, Midfielders and Defenders Metric 
 
