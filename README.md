@@ -352,13 +352,15 @@ This yielded a lower result, but NPV of net revenues is still expected to be pos
 
 #### Base Social Media Growth Scenario
 
-In the baseline scenario (5% p.a. growth in social media), the most significant variable appears to be inflation. 
+Sensitivity analysis was conducted on our base case revenue projections against changes in the growth rate of broadcast revenues, interest rates, and inflation.
 
 ![](be_sens.png)
 
+> In the event of a 1.25% rise in annual inflation, the baseline estimate leads to a negative NPV regardless of changes in broadcast revenue growth. 
+
 ![](be_sens1.png)
 
-In the event of a 1.25% rise in annual inflation, the baseline estimate leads to a negative NPV regardless of changes in broadcast revenue growth. Interest rates and broadcast revenue growth appear less significant, with NPV projected as positive even with a 5% rise and -1.25% shock to both assumptions respectively. 
+> Interest rates and broadcast revenue growth appear less significant, with NPV projected as positive even with a 5% rise and -1.25% shock to both assumptions respectively. 
 
 #### Low Social Media Growth Scenario
 
@@ -366,11 +368,9 @@ Sensitivity tests were also conducted for a pessimistic scenario for social medi
 
 ![](low_sens.png)
 
-![](low_sens1.png)
+> It can be observed that there is a significant increase in the number of scenarios that result in a negative NPV, with shocks to inflation upwards of 0.75% leading to negative NPV outcomes in almost all situations. 
 
-With no change to other variables, the decrease in social media growth leads to a NPV of 673.58 million. It can be observed that
-there is subsequently a significant increase in the number of scenarios that result in a negative NPV, with shocks
-to inflation upwards of 0.75% leading to negative NPV outcomes in almost all situations. 
+![](low_sens1.png)
 
 The worst-case outcomes measured through the NPV are -785.13 million at 5% social media growth and -1052.57
 million at 2% in the two scenarios. Thus, our initial funding of 995 million Doubloons should be sufficient to cover
