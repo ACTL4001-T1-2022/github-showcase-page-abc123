@@ -2,7 +2,7 @@
 
 ![](soccer.gif)
 
-## Group Members
+## Group Members ![Fantastic-Four-Feature-Header](https://user-images.githubusercontent.com/102905880/162619102-571204b4-0967-45a7-9448-428fba9a9cf0.jpg)
 * Lenny Han - z5258272
 * Thomas Jiang - z5255865
 * Zekai (Eric) Kuang - z5256982
