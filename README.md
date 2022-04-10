@@ -346,6 +346,8 @@ An alternative scenario was considered, changing our assumptions on the growth o
 
 ![](low.png)
 
+This yielded a lower result, but NPV of net revenues is still expected to be positive over the 10-year forecasting period.
+
 ### Sensitivity Analysis 
 
 #### Base Social Media Growth Scenario
