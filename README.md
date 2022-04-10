@@ -407,5 +407,4 @@ statistics. The key objectives of achieving competitiveness were successfully me
 adapting to the future competition environment, espeically through the development of our player metric and continual monitoring. Overall, Rarita’s national team will build a brand for the country’s football program and achieve positive economic impacts for the country.
 
 ![](goal.gif)
-![5a4](https://user-images.githubusercontent.com/102905880/162618009-7502ea39-9300-4ace-9fe3-026855ace792.jpg)
 
