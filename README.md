@@ -24,7 +24,7 @@
     </li>
     <li>
       <a href="#assumptions">Assumptions</a>
-      <ol>
+      <ol> 
         <li><a href="#team-selection">Team Selection</a></li>
         <li><a href="#economic-impact">Economic Impact</a></li>
       </ol>
