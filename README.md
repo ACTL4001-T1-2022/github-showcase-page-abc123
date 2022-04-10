@@ -322,7 +322,7 @@ circumstances that could otherwise lead to adverse effects for the team.
 ## Economic Impacts 
 
 ### GDP Projections
-Rarita’s GDP growth was projected over the 2021-31 period using a linear regression model, with the predictors:
+Rarita’s GDP growth was projected over the 2021-31 period using a linear regression model ([GDP Projection.xlsx](https://github.com/ACTL4001-T1-2022/github-showcase-page-abc123/files/8458924/GDP.Projection.xlsx)), with the predictors:
 * Population density
 * Healthcare spending per capita
 * Household savings rate
