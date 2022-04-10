@@ -260,7 +260,7 @@ Based on the variable importance results above, the following player statistics 
 
 #### Goalkeeper Metric
 
-![](random_forest_GK.png)
+![](var_imp_GK.png)
 
 Based on the variable importance results above, the following player statistics were chosen for goalkeepers:
 
