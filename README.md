@@ -371,12 +371,15 @@ Sensitivity tests were also conducted for a pessimistic scenario for social medi
 
 ![](low_sens1.png)
 
-The worst-case outcomes measured through the NPV are -785.13 million at 5% social media growth and -1052.57
-million at 2% in the two scenarios. Thus, our initial funding of 995 million Doubloons should be sufficient to cover
-the potential losses in most scenarios. The Raritan government is advised to set up a reserve for 995 million and
-invest it at the 10-year treasury rate, allowing funds to be liquidated if assumptions materialise and are worse than
-expected. Although this strategy may expose the funds to interest-rate risk, this could be managed through hedging
-via instruments such as interest rate swaps and duration matching between assets and expected liabilities.
+> Like the base scenario, the variable which produces the greatest downside risk is inflation, with shocks to risk-free rates and growth of broadcast revenues still producing outcomes of positive NPV.
+
+### Managing Risks
+
+From our sensitivity tests, the worst-case outcomes measured through the NPV are -785.13 million at 5% social media growth and -1052.57 million at 2% in the two scenarios. Thus, our initial funding of 995 million Doubloons should be sufficient to cover the potential losses in the majority of scenarios considered. 
+
+We advise the Raritan government to set up a reserve for 995 million and invest it at the 10-year treasury rate, allowing funds to be liquidated if assumptions materialise and are worse than expected. Although this strategy may expose the funds to interest-rate risk, this could be managed through hedging via instruments such as interest rate swaps and duration matching between assets and expected liabilities.
+
+As noted previously, the external variable which poses the greatest threat on the strategy's financing is inflation. To mitigate this risk, ongoing monitoring of the economic environment and inflation must be conducted. Cost-cutting measures and reducing staff expenses by constructing a less competitive team can be adopted as a last resort if economic conditions jeopardize the feasability of our proposed strategy. Allocating the initial reserves to assets such as inflation-linked bonds can also mitigate the potential imapacts of an inflationary shock on the revenues and expenses of the team.
 
 ## Risks and Limitations
 
