@@ -242,7 +242,9 @@ The most significant predictors were determined by setting a lower bound for its
 
 #### Forwards, Midfielders and Defenders Metric 
 
-![](varimp.png)
+<p align="center">
+    // ![](varimp.png)
+</p>
 
 Based on the variable importance results above, the following player statistics were chosen for forwards, midfielders, and defenders:
 
