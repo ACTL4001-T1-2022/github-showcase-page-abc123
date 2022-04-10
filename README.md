@@ -239,6 +239,9 @@ It was found that Random Forest performed similarly to GBM, whereby due to the p
 The most significant predictors were determined by setting a lower bound for its contribution to percentage of variance explained, predictors below this threshold were removed. This ultimately led us to a Random Forest model that only included the most significant predictors of player salary, which were then used to build our player metric. 
 
 ### Player Metric
+
+#### Forwards, Midfielders and Defenders Metric 
+
 ![](varimp.png)
 
 Based on the variable importance results above, the following player statistics were chosen for forwards, midfielders, and defenders:
@@ -256,7 +259,9 @@ Based on the variable importance results above, the following player statistics 
 |Clr| Clearances|0.0719|
 |Pressures.Mid.3rd|Pressure applied to opponent in the middle 1/3|0.0714|
 
-ADD GK VAR IMP
+#### Goalkeeper Metric
+
+![](random_forest_GK.png)
 
 Based on the variable importance results above, the following player statistics were chosen for goalkeepers:
 
