@@ -43,7 +43,7 @@
       <a href="#economic-impacts">Economic Impacts</a>
       <ol>
         <li><a href="#gdp-projections">GDP Projections</a></li>
-        <li><a href="#net-revenue-projections">Net Revenue Projections</a></li>
+        <li><a href="#net-revenue-projections-and-expected-NPV">Net Revenue Projections and Expected NPV</a></li>
         <li><a href="#sensitivity-analysis">Sensitivity Analysis</a></li>
       </ol>
     </li>
