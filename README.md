@@ -45,6 +45,7 @@
         <li><a href="#gdp-projections">GDP Projections</a></li>
         <li><a href="#net-revenue-projections-and-expected-NPV">Net Revenue Projections and Expected NPV</a></li>
         <li><a href="#sensitivity-analysis">Sensitivity Analysis</a></li>
+        <li><a href="#managing-risks">Managing Risks</a></li>
       </ol>
     </li>
     <li>
@@ -373,7 +374,7 @@ Sensitivity tests were also conducted for a pessimistic scenario for social medi
 
 > Like the base scenario, the variable which produces the greatest downside risk is inflation, with shocks to risk-free rates and growth of broadcast revenues still producing outcomes of positive NPV.
 
-### Managing Risks
+#### Managing Risks
 
 From our sensitivity tests, the worst-case outcomes measured through the NPV are -785.13 million at 5% social media growth and -1052.57 million at 2% in the two scenarios. Thus, our initial funding of 995 million Doubloons should be sufficient to cover the potential losses in the majority of scenarios considered. 
 
