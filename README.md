@@ -409,8 +409,6 @@ In conclusion, a competitive national team was constructed for Rarita using a me
 statistics. The key objectives of achieving competitiveness were successfully met as Rarita’s national team is projected to continue improving and
 adapting to the future competition environment, espeically through the development of our player metric and continual monitoring. Overall, Rarita’s national team will build a brand for the country’s football program and achieve positive economic impacts for the country.
 
-![5a4](https://user-images.githubusercontent.com/102905880/162618623-10409c81-1c30-48b9-8f5a-343f3a939061.jpg)
-
 ## References
 Brooks J., Kerr M., and Guttag J., 2016., Developing a Data-Driven Player Ranking in Soccer Using Predictive Model Weights, KDD '16: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 49–55. DOI: 10.1145/2939672.2939695, Date Accessed: 15/03/2022
 
